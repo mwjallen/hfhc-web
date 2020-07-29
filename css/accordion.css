@@ -1,0 +1,52 @@
+/* [THE ENTIRE TAB] */
+.tab {
+  	position: relative;
+  	margin: 2px;
+  	max-width: 100%;
+	border: #3A603A solid 0.5px;
+}
+
+/* [THE LABEL] */
+.tab input {
+  display: none;
+}
+.tab label {
+  display: block;
+  background: #5C825B;
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+}
+.tab label::after {
+  content: "\25b6";
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  display: block;
+  transition: all 0.4s;
+}
+.tab input[type=checkbox]:checked + label::after,
+.tab input[type=radio]:checked + label::after {
+  transform: rotate(90deg);
+}
+
+/* [THE CONTENTS] */
+.tab-content {
+  overflow: hidden;
+  background: #AAE9B7;
+  /* CSS animation will not work with auto height */
+  /* This is why we use max-height */
+  transition: max-height 0.4s; 
+  max-height: 0;
+}
+.tab-content p {
+    margin: 20px;
+    color: #011E0A;
+    text-align: justify;
+}
+.tab input:checked ~ .tab-content {
+  /* Set the max-height to a large number */
+  /* Or 100% viewport height */
+  max-height: 100vh;
+}
+

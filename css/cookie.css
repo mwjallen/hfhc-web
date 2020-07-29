@@ -1,0 +1,50 @@
+cookie-container p {
+    line-height: 2;
+    font-size: small;
+    text-align: center;
+}
+
+.cookie-container p>img {
+    max-width: 1.5vw;
+    max-height: auto;
+}
+
+.cookie-container span>a {
+    color: #f17e00;
+}
+
+.cookie-container {
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    right: 0;
+    background: #2f3640;
+    color: #f5f6fa;
+    width: 100%;
+    box-shadow: 0 -2px 16px rgba(47, 54, 64, 0.39);
+    transition: 400ms;
+}
+
+.cookie-container.active {
+    bottom: 0;
+}
+
+.cookie-container a {
+    color: #f5f6fa;
+}
+
+.cookie-btn {
+    background: #f17e00;
+    color: #f5f6fa;
+    font-size: 16px;
+    padding: 0.2vw 0.8vw;
+    border: 0;
+    border-radius: 8px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    cursor: pointer;
+}
+
+.cookie-btn:hover {
+    color: #575fcf;
+}
